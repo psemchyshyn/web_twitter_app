@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+
+<html>  
+    <head>
+        <title>Search friends</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class="input_text">
+            <h1>Where are my friends?</h1>
+            <form action="/find" method="POST">
+                <input type="text" name="user" placeholder="Type user name or id...">
+                <input type="submit" value="SEARCH">
+            </form>
+        </div>
+    </body>
+
+</html>

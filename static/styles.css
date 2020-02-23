@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(images/header3.jpg);
+    background-size: cover;
+}
+
+h1{
+    padding: 10px 20px;
+    margin: 0 50px;
+    font-size: 22px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.input_text{
+    position: absolute;
+    left: 75%;
+    top: 36%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+}
+
+input{
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    box-sizing: border-box;
+    transition: linear 0.4s;
+}
+
+input[name="user"]{
+    background-color: white;
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+
+input[type="submit"]{
+    position: relative;
+    left: -5px;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: #1292b3;
+    color: #fff;
+}
+
+input[type="submit"]:hover{
+    background: white;
+    color: #1292b3;
+}
