@@ -49,7 +49,7 @@ def map_builder(user: str) -> None:
         marker = folium.Marker(location=loc, icon=icon, popup=friend)
         friend_layer.add_child(marker)
     mapp.add_child(friend_layer)
-    mapp.save("static/images/map.html")
+    mapp.save("templates/map.html")
 
 
 def run_map_building(user) -> None:
