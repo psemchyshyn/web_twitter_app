@@ -56,3 +56,12 @@ input[type="submit"]:hover{
     background: white;
     color: #1292b3;
 }
+
+h3{
+    width: 200px;
+    font-size: 13px;
+    color: white;
+    margin-left: 5px;
+    padding-bottom: 7px;
+    border-bottom: 3px solid white;
+}

@@ -25,14 +25,14 @@ def getting_followers(user: str) -> dict:
     id and the output is a dictionary of this
     user friends and their locations
     """
-    followers = API_OBJ.followers(user)
+    following = API_OBJ.friends(user)
     friends_dict = {}
     count = 0
-    for friend in followers:
+    for friend in following:
         if friend.location != "":
             friends_dict[friend.screen_name] = friend.location
             count += 1
-        if count > 15:
+        if count > 25:
             break
     return friends_dict
 
@@ -43,9 +43,11 @@ def check_user_name(user: str) -> bool:
     the name of twitter account
     """
     try:
-        API_OBJ.followers(user)
+        API_OBJ.friends(user)
         valid = True
     except tw.error.TweepError:
+        valid = False
+    if " " in user:
         valid = False
     return valid
 
