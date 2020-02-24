@@ -3,7 +3,6 @@ Palvo Semchyshyn
 22.02.2020
 '''
 
-
 from flask import Flask, render_template, redirect, request, url_for
 from map_building import map_builder
 from twitter_users import check_user_name
@@ -37,7 +36,7 @@ def map_of_friends(name: str):
     A function for rendering a map,
     after user clicked post method
     """
-    print(name)
+    map_builder(name)
     return render_template("map.html")
 
 
@@ -52,9 +51,10 @@ def find():
         user = request.form.get("user")
         if not user or not check_user_name(user):
             return redirect(url_for("error_input"))
-        map_builder(user)
         return redirect(url_for("map_of_friends", name=user))
 
 
 if __name__ == "__main__":
-    APP.run()
+    APP.jinja_env.auto_reload = True
+    APP.config['TEMPLATES_AUTO_RELOAD'] = True
+    APP.run(debug=True)

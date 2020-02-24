@@ -30,9 +30,9 @@ def getting_followers(user: str) -> dict:
     count = 0
     for friend in followers:
         if friend.location != "":
-            friends_dict[friend.name] = friend.location
+            friends_dict[friend.screen_name] = friend.location
             count += 1
-        if count > 10:
+        if count > 15:
             break
     return friends_dict
 
